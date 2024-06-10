@@ -1,0 +1,8 @@
+<div>
+	<h3>Login Up</h3>
+	<form [formGroup]="formCredentials" (ngSubmit)="handleShipping()">
+		<input type="text" placeholder="user" formControlName="username" />
+		<input type="password" placeholder="password" formControlName="password" />
+		<button>Login Up</button>
+	</form>
+</div>
