@@ -1,7 +1,5 @@
-import { Component } from "@angular/core";
-import { JwtHelperService } from "@auth0/angular-jwt";
-
-const jwtHelperService = new JwtHelperService();
+import { Component, inject } from "@angular/core";
+import { LoginService } from "../../services/login.service";
 
 @Component({
 	selector: "app-private",
@@ -11,12 +9,23 @@ const jwtHelperService = new JwtHelperService();
 	styleUrl: "./private.component.css"
 })
 export class PrivateComponent {
+	loginService = inject(LoginService);
+
 	name: string = "";
 	ngOnInit() {
 		const token: any = localStorage.getItem("token");
 		console.log("token: ", token);
-		const decoded = jwtHelperService.decodeToken(token);
-		console.log("decoded: ", decoded);
-		this.name = decoded.name;
+		if (token) {
+			this.loginService.validateToken(token).subscribe((response: any) => {
+				console.log("response: ", response);
+				if (response.result === "Good!") {
+					this.name = response.data.name;
+				} else {
+					console.log("token is not valid");
+				}
+			});
+		} else {
+			console.log("don't exist token");
+		}
 	}
 }
