@@ -1,21 +1,58 @@
-<main class="container-fluid py-5 main-bg">
+<!-- Secondary Navbar -->
+<nav class="navbar navbar-expand-lg secondary-navbar bg-dark container navbar-dark">
+	<div class="collapse navbar-collapse text-center" id="secondaryNavbar">
+		<ul class="navbar-nav mx-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Library</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">New and Popular</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Trailers</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Categories</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">News</a>
+			</li>
+		</ul>
+	</div>
+	<form class="d-flex" role="search">
+		<input class="form-control mx-1 search-bar" type="search" placeholder="Search" aria-label="Search" />
+		<button class="btn btn-outline-light me-1" type="submit"><i class="bi bi-search"></i></button>
+	</form>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryNavbar" aria-controls="secondaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+</nav>
+
+<!-- Main Image Section -->
+<div class="main-image">
+	<div class="overlay">
+		<h1>NEW GAMES</h1>
+		<p>Now available</p>
+	</div>
+</div>
+<main class="container py-4 main-bg">
 	<div class="row">
 		<!-- Aside -->
 		<div class="col-md-3 col-lg-2">
-			<aside class="sticky-top bg-dark text-white p-4">
+			<aside class="sticky-top bg-dark text-white p-4 text-center">
 				<h4 class="mb-3">Home Nav</h4>
 				<ul class="nav flex-column">
 					<li class="nav-item">
-						<a class="nav-link" href="#seccion-1">Section 1</a>
+						<a class="nav-link" href="#seccion-1">Top</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#carouselExample">Section 2</a>
+						<a class="nav-link" href="#carouselExample">Carrusel</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#seccion-3">Section 3</a>
+						<a class="nav-link" href="#News">News</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#seccion-4">Section 4</a>
+						<a class="nav-link" href="#New Games">New Games</a>
 					</li>
 				</ul>
 				<hr class="my-4" />
@@ -36,19 +73,8 @@
 
 		<!-- Contenido principal -->
 		<div class="col-md-9 col-lg-10">
-			<!-- Imagen de fondo con GIF y otra imagen encima -->
-			<div class="background-container">
-				<video autoplay loop muted playsinline>
-					<source src="../../../assets/multimedia/videoPortada2.mp4" type="video/mp4" />
-					<!-- Add more sources for different formats if needed -->
-				</video>
-				<div class="background-image">
-					<img src="../../../assets/multimedia/logoInicio2.png" class="img-home" alt="Image on top" />
-				</div>
-			</div>
-
 			<!-- Carrusel de imágenes -->
-			<div id="carouselExample" class="carousel slide">
+			<div id="carouselExample" class="carousel w-75 container d-flex justify-content-center">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="../../../assets/multimedia/carrusel1.png" class="d-block w-100" alt="..." />
@@ -71,7 +97,7 @@
 			</div>
 
 			<!-- Sección de noticias -->
-			<h2 class="mt-4">News</h2>
+			<h2 class="mt-4" id="News">News</h2>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card mb-4">
@@ -100,10 +126,37 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-4">
+					<div class="card mb-4">
+						<img src="noticia3.jpg" alt="News 3" class="card-img-top" />
+						<div class="card-body">
+							<h5 class="card-title">News 3</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4">
+						<img src="noticia3.jpg" alt="News 3" class="card-img-top" />
+						<div class="card-body">
+							<h5 class="card-title">News 3</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4">
+						<img src="noticia3.jpg" alt="News 3" class="card-img-top" />
+						<div class="card-body">
+							<h5 class="card-title">News 3</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+						</div>
+					</div>
+				</div>
 			</div>
-
+			<hr />
 			<!-- Sección de juegos -->
-			<h2 class="mt-4">New Games</h2>
+			<h2 class="mt-4" id="New Games">New Games</h2>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card mb-4">
@@ -119,6 +172,33 @@
 						<img src="juego2.jpg" alt="New Game 2" class="card-img-top" />
 						<div class="card-body">
 							<h5 class="card-title">New Game 2</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4">
+						<img src="juego3.jpg" alt="New Game 3" class="card-img-top" />
+						<div class="card-body">
+							<h5 class="card-title">New Game 3</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4">
+						<img src="juego3.jpg" alt="New Game 3" class="card-img-top" />
+						<div class="card-body">
+							<h5 class="card-title">New Game 3</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-4">
+						<img src="juego3.jpg" alt="New Game 3" class="card-img-top" />
+						<div class="card-body">
+							<h5 class="card-title">New Game 3</h5>
 							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
 						</div>
 					</div>

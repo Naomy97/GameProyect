@@ -4,38 +4,34 @@
 	<a routerLink="login">Login |</a>
 	<a routerLink="private">Private |</a>
 </nav> -->
-<nav class="navbar navbar-expand-lg nav-bar-bg">
-	<div class="container-fluid">
-		<a class="navbar-brand" routerLink="home">Home</a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-bs-toggle="collapse"
-			data-bs-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent"
-			aria-expanded="false"
-			aria-label="Toggle navigation">
+<header class="bg-dark text-white">
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<img src="../../../assets/multimedia/logoInicio.png" class="img-nav me-2" alt="" />
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		<div class="collapse navbar-collapse text-center" id="navbarNav">
+			<ul class="navbar-nav me-auto">
 				<li class="nav-item">
-					<a class="nav-link" routerLink="singup">Sing Up</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" routerLink="login">Login Up</a>
+					<a class="nav-link" routerLink="home">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" routerLink="private">Game Store</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link">Tournaments</a>
+					<a class="nav-link" href="#">Tournaments</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Community</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Support</a>
 				</li>
 			</ul>
-			<form class="d-flex" role="search">
-				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-				<button class="btn btn-outline-dark" type="submit">Search</button>
-			</form>
+			<div class="d-flex justify-content-center p-2">
+				<button class="btn btn-outline-light me-2" routerLink="login">Login Up</button>
+				<button class="btn btn-outline-light me-2" routerLink="singup">Sing Up</button>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
+</header>

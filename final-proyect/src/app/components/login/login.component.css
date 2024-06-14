@@ -1,0 +1,47 @@
+.bg {
+	margin: 0;
+	padding: 0;
+	height: 80vh;
+	width: 100%;
+	overflow: hidden;
+}
+.bg-blur {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("../../../assets/multimedia/fondoLogin.png");
+	background-size: cover;
+	background-position: center;
+	filter: blur(4px); /* Ajusta el valor para más o menos desenfoque */
+	z-index: -1;
+}
+
+.login-container {
+	max-width: 900px;
+	margin: auto;
+	margin-top: 150px;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	color: white;
+}
+.qr-code {
+	text-align: center;
+}
+.qr-code img {
+	max-width: 100%;
+}
+.form-control {
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	color: white;
+}
+.form-control:focus {
+	background: rgba(255, 255, 255, 0.2);
+}
+::placeholder {
+	color: white;
+	opacity: 0.4;
+	text-align: center;
+}

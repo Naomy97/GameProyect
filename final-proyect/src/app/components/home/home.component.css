@@ -1,28 +1,26 @@
-.background-container {
+.main-image {
+	background-image: url("../../../assets/multimedia/imgInicio.png");
+	background-size: cover;
+	background-position: center;
+	height: 80vh;
 	position: relative;
-	height: 100vh; /* adjust the height according to your needs */
-	width: 100%;
-	overflow: hidden;
 }
-
-video {
+.overlay {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: -1; /* put the video behind the image */
+	bottom: 20px;
+	left: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
 }
-
-.background-image {
+.secondary-navbar {
+	z-index: 1;
 	position: absolute;
-	top: 50%; /* center the image vertically */
-	left: 50%; /* center the image horizontally */
-	transform: translate(-50%, -50%);
-	z-index: 1; /* put the image on top of the video */
+	width: 75%;
+	left: 50%;
+	transform: translateX(-50%);
 }
-
-.img-home {
-	height: 20em;
+.search-bar {
+	width: 150px;
 }
