@@ -14,13 +14,16 @@ export class SupportComponent {
 	loginService = inject(LoginService);
 
 	name: string = "";
+	id: string = "";
 	ngOnInit() {
 		const token: any = localStorage.getItem("token");
 		if (token) {
 			this.loginService.validateToken(token).subscribe((response: any) => {
 				if (response.result === "Good!") {
 					this.name = response.data.name;
-					this.toastrService.success(`Hello, ${this.name}!`);
+					this.toastrService.success(`Hello, Please leave your message to support you!`);
+					this.id = response.data.id;
+					console.log(this.id);
 				} else {
 					this.loginService.logout();
 				}

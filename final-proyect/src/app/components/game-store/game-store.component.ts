@@ -3,13 +3,13 @@ import { ToastrService } from "ngx-toastr";
 import { LoginService } from "../../services/login.service";
 
 @Component({
-	selector: "app-private",
+	selector: "app-game-store",
 	standalone: true,
 	imports: [],
-	templateUrl: "./private.component.html",
-	styleUrl: "./private.component.css"
+	templateUrl: "./game-store.component.html",
+	styleUrl: "./game-store.component.css"
 })
-export class PrivateComponent {
+export class GameStoreComponent {
 	toastrService = inject(ToastrService);
 	loginService = inject(LoginService);
 
