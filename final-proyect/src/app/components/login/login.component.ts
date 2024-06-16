@@ -34,7 +34,9 @@ export class LoginComponent {
 				this.loginService.login(credential).subscribe((response: any) => {
 					if (response.result === "Good!") {
 						localStorage.setItem("token", response.data);
-						this.router.navigateByUrl("/gamestore");
+						const redirectUrl = this.loginService.redirectUrl ? this.loginService.redirectUrl : "/gamestore";
+						this.loginService.redirectUrl = null; // Resetea la URL de redirección
+						this.router.navigateByUrl(redirectUrl);
 					} else {
 						this.toastrService.warning("Invalid credentials");
 					}

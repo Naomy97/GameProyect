@@ -14,6 +14,7 @@ export class LoginService {
 	router = inject(Router);
 
 	API_URL = "http://localhost:3000/login";
+	redirectUrl: string | null = null;
 
 	login(credential: Credential) {
 		return this.httpClient.post(this.API_URL, credential);
