@@ -19,19 +19,15 @@
 }
 
 .login-container {
-	max-width: 900px;
+	max-width: 550px;
 	margin: auto;
-	margin-top: 150px;
+	margin-top: 140px;
 	background: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 	color: white;
+	padding: 10px;
 }
-.qr-code {
-	text-align: center;
-}
-.qr-code img {
-	max-width: 100%;
-}
+
 .form-control {
 	background: rgba(255, 255, 255, 0.1);
 	border: none;
@@ -45,3 +41,10 @@
 	opacity: 0.4;
 	text-align: center;
 }
+
+/* .qr-code {
+	text-align: center;
+}
+.qr-code img {
+	max-width: 100%;
+} */

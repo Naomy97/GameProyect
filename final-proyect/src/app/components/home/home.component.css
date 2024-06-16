@@ -9,10 +9,12 @@
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	padding: 10px 20px;
-	border-radius: 5px;
+	border-radius: 20px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .secondary-navbar {
 	z-index: 1;

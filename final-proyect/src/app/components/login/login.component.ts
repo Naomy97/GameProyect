@@ -1,11 +1,9 @@
 import { Component, inject } from "@angular/core";
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { JwtHelperService } from "@auth0/angular-jwt";
+import { ToastrService } from "ngx-toastr";
 import { Credential } from "../../interfaces/credential";
 import { LoginService } from "../../services/login.service";
-
-const jwtHelperService = new JwtHelperService();
 
 @Component({
 	selector: "app-login",
@@ -16,6 +14,7 @@ const jwtHelperService = new JwtHelperService();
 })
 export class LoginComponent {
 	router = inject(Router);
+	toastrService = inject(ToastrService);
 	loginService: LoginService = inject(LoginService);
 
 	formCredentials = new FormGroup({
@@ -33,11 +32,16 @@ export class LoginComponent {
 					password
 				};
 				this.loginService.login(credential).subscribe((response: any) => {
-					localStorage.setItem("token", response.data);
-					this.router.navigateByUrl("/private");
+					if (response.result === "Good!") {
+						localStorage.setItem("token", response.data);
+						this.router.navigateByUrl("/gamestore");
+					} else {
+						this.toastrService.warning("Invalid credentials");
+					}
 				});
 			}
 		} else {
+			this.toastrService.error("All fields are required");
 		}
 	}
 }
