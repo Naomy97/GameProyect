@@ -21,7 +21,7 @@ export class SupportComponent {
 			this.loginService.validateToken(token).subscribe((response: any) => {
 				if (response.result === "Good!") {
 					this.name = response.data.name;
-					this.toastrService.success(`Hello, Please leave your message to support you!`);
+					this.toastrService.info(`Hello, Please leave your message to support you!`);
 					this.id = response.data.id;
 					console.log(this.id);
 				} else {

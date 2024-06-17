@@ -1,30 +1,69 @@
 <div class="bg">
 	<div class="bg-blur"></div>
-	<div class="login-container text-center">
+	<div class="support-container text-center">
+		<h3 class="text-warning">Welcome to the support system</h3>
+		<div class="container">
+			<p class="fs-4">We are grateful for having chosen us, if you have a problem we put several methods at your disposal so that you can play calmly and have fun.</p>
+		</div>
+		<hr />
+		<h4 class="text-warning">Server Status by Network</h4>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-4">
+				<a href="https://status.playstation.com/en-us/" class="text-white text-decoration-none" target="_blank"
+					><img src="../../../assets/multimedia/psn.png" />
+					<p>PSN</p>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-4">
+				<a href="https://beta.support.xbox.com/xbox-live-status" class="text-white text-decoration-none" target="_blank"
+					><img src="../../../assets/multimedia/xbox.png" />
+					<p>Xbox Live</p>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-4">
+				<a href="https://twitter.com/BlizzardCS" class="text-white text-decoration-none" target="_blank"
+					><img src="../../../assets/multimedia/battle_net.png" />
+					<p>Battle.net</p>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-4">
+				<a href="https://www.nintendo.com/consumer/network/en_na/network_status.jsp" class="text-white text-decoration-none" target="_blank"
+					><img src="../../../assets/multimedia/wii.png" />
+					<p>Nintendo</p>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-4">
+				<a href="http://store.steampowered.com/stats/" class="text-white text-decoration-none" target="_blank"
+					><img src="../../../assets/multimedia/steam.png" />
+					<p>Steam</p>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-4">
+				<a href="https://status.epicgames.com/" class="text-white text-decoration-none" target="_blank"
+					><img src="../../../assets/multimedia/OS-Epic-Logo-45px.png" />
+					<p>Epic Games</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="support-container text-center">
 		<h3 class="text-warning">Leave your message</h3>
 		<form>
 			<div class="form-group mb-2">
 				<label for="name">Name</label>
-				<input type="text" class="form-control text-center" id="name" placeholder="Name" formControlName="name" />
+				<input type="text" class="form-control text-center" id="name" formControlName="name" />
 			</div>
 			<div class="form-group mb-2">
 				<label for="email">Contact Email</label>
-				<input type="email" class="form-control text-center" id="email" placeholder="Email" formControlName="email" />
+				<input type="email" class="form-control text-center" id="email" formControlName="email" />
 			</div>
 			<div class="form-group mb-2">
 				<label for="phoneNumber">Phone Number</label>
-				<input type="text" class="form-control text-center" id="phoneNumber" placeholder="Phone Number" formControlName="phoneNumber" />
+				<input type="text" class="form-control text-center" id="phoneNumber" formControlName="phoneNumber" />
 			</div>
 			<div class="form-group mb-2">
 				<label for="message">Message</label>
-				<textarea
-					name="request"
-					class="form-control"
-					id="request_description"
-					aria-required="true"
-					aria-labelledby="request_description_label"
-					style="height: 100px"
-					placeholder="Message"></textarea>
+				<textarea name="request" class="form-control" id="request_description" aria-required="true" aria-labelledby="request_description_label" style="height: 100px"></textarea>
 			</div>
 			<div class="form-group mb-2">
 				<label for="imagen">Upload an image of the error</label>
@@ -33,5 +72,110 @@
 
 			<button type="submit" value="Login Up" class="btn btn-warning btn-block mt-3">Send Message</button>
 		</form>
+	</div>
+	<div class="support-container-2 text-center" data-bs-theme="dark">
+		<h3 class="text-warning">Frequent Questions</h3>
+		<div class="accordion accordion-flush" id="accordionFlushExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+						Can I try a game before buying it?
+					</button>
+				</h2>
+				<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						Some publishers sometimes offer free demos or trial periods of some non-free games (for example, a weekend free trial). During a free trial period, you can download and play a trial
+						version of the game before you decide to purchase it, but you will no longer be able to access the game after the trial period ends.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+						What payment methods are supported?
+					</button>
+				</h2>
+				<div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						Credit cards, PayPal and a variety of alternative payment methods are supported. Below you can see a list of the alternative payment methods we currently support. Methods that incur
+						additional payment processing fees are marked with an asterisk (*).
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+						Can I have a refund for a digital game?
+					</button>
+				</h2>
+				<div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						Please review the Digital Game Purchase Refund Terms to see if your game or content is eligible for a refund. If so, follow the refund request process on that page.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+						I'm having trouble playing a game I just bought. What should I do?
+					</button>
+				</h2>
+				<div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						If you are having trouble playing a game, enter the game title in the search bar. You will find troubleshooting information on the game page. If the game page doesn't appear, go to
+						the game developer's website.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+						What happens if my product does not arrive?
+					</button>
+				</h2>
+				<div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						If your order does not arrive within the stipulated time, please contact us so we can investigate the reason for the delay. We depend a lot on parcels. However, we will ensure that
+						the product arrives to you no matter what. Guaranteed
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+						How long do I have to make the payment?
+					</button>
+				</h2>
+				<div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">Exactly 48 hours after generating the purchase order, ending those 48 hours. We are not responsible for the existence of the item.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+						Are the games original?
+					</button>
+				</h2>
+				<div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">We are against piracy so we only handle original products.</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+						Is my purchase 100% safe?
+					</button>
+				</h2>
+				<div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body">
+						Yes, we are a serious company, and 100% reliable, we have a long history in our established branches, trained staff, we provide you with a telephone, email, social networks and live
+						chat to communicate with us.
+						<br />
+						<br />In addition, we make sure that your package reaches your destination. For any details regarding the route of your package, it is not necessary for you to contact the parcel
+						provider. It is part of our service. We will arrange the details that arise.
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

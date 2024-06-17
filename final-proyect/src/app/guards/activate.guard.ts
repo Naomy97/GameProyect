@@ -7,7 +7,7 @@ import { LoginService } from "../services/login.service";
 	providedIn: "root"
 })
 export class activateGuard implements CanActivate {
-	constructor(private loginService: LoginService, private router: Router) {}
+	constructor(private loginService: LoginService, private router: Router, private toastrService: ToastrService) {}
 
 	canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 		if (this.loginService.isLogin()) {
@@ -15,20 +15,9 @@ export class activateGuard implements CanActivate {
 		} else {
 			// Almacena la URL a la que el usuario intentó acceder
 			this.loginService.redirectUrl = state.url;
+			this.toastrService.info("First you have to be logged in!");
 			this.router.navigate(["/login"]);
 			return false;
 		}
 	}
 }
-
-/* const router = inject(Router);
-	const toastrService = inject(ToastrService);
-	const loginService = inject(LoginService);
-
-	if (loginService.isLogin()) {
-		return true;
-	} else {
-		toastrService.info("First you have to be logged in!");
-		router.navigateByUrl("/login");
-		return false;
-	} */

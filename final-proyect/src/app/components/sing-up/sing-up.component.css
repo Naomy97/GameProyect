@@ -35,3 +35,9 @@
 .form-control:focus {
 	background: rgba(255, 255, 255, 0.2);
 }
+
+@media only screen and (min-width: 200px) and (max-width: 800px) {
+	.bg {
+		height: 130vh;
+	}
+}

@@ -1,9 +1,12 @@
 .bg {
 	margin: 0;
 	padding: 0;
-	height: 80vh;
+	height: auto;
 	width: 100%;
 	overflow: hidden;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
 }
 .bg-blur {
 	position: fixed;
@@ -18,9 +21,20 @@
 	z-index: -1;
 }
 
-.login-container {
-	max-width: 550px;
-	margin: auto;
+.support-container {
+	width: auto;
+	margin: 23px;
+	margin-top: 20px;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	color: white;
+	padding: 7px;
+	height: 74vh;
+}
+
+.support-container-2 {
+	width: auto;
+	margin: 23px;
 	margin-top: 20px;
 	background: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
@@ -40,4 +54,30 @@
 	color: white;
 	opacity: 0.4;
 	text-align: center;
+}
+
+.accordion-header {
+	opacity: 0.7;
+}
+
+textarea {
+	resize: none;
+}
+
+@media (max-width: 700px) {
+	.bg {
+		grid-template-columns: 1fr;
+	}
+	.support-container {
+		height: 530px;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 1050px) {
+	.bg {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.support-container-2 {
+		transform: translateX(55%);
+	}
 }
