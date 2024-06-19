@@ -2,14 +2,14 @@
 	background-image: url("../../../assets/multimedia/imgInicio.png");
 	background-size: cover;
 	background-position: center;
-	height: 80vh;
+	height: 90vh;
 	position: relative;
 }
 .overlay {
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	padding: 10px 20px;
 	border-radius: 20px;
@@ -22,7 +22,7 @@
 	width: 75%;
 	left: 50%;
 	transform: translateX(-50%);
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.8);
 	border-radius: 0px 0px 20px 20px;
 }
 .category-navbar {
@@ -35,4 +35,18 @@
 }
 .search-bar {
 	width: 150px;
+}
+
+.img-caru {
+	height: 40vw;
+}
+
+.control {
+	background-color: #000000;
+	padding: 10px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.control:hover {
+	background-color: black;
 }

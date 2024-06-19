@@ -3,6 +3,7 @@ import { RouterOutlet } from "@angular/router";
 
 import { NavComponent } from "./components/nav/nav.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { FaviconService } from "./services/favicon.service";
 
 @Component({
 	selector: "app-root",
@@ -12,5 +13,11 @@ import { FooterComponent } from "./components/footer/footer.component";
 	styleUrl: "./app.component.css"
 })
 export class AppComponent {
-	title = "final-proyect";
+	constructor(private faviconService: FaviconService) {}
+
+	ngOnInit(): void {
+		setInterval(() => {
+			this.faviconService.changeFavicon();
+		}, 2000); // Cambia cada segundo
+	}
 }

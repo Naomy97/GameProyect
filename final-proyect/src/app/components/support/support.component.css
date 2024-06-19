@@ -14,10 +14,10 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url("../../../assets/multimedia/fondoLogin.png");
+	background-image: url("../../../assets/multimedia/fondoSupport.png");
 	background-size: cover;
 	background-position: center;
-	filter: blur(4px); /* Ajusta el valor para más o menos desenfoque */
+	filter: blur(3px); /* Ajusta el valor para más o menos desenfoque */
 	z-index: -1;
 }
 
