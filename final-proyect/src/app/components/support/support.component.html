@@ -48,14 +48,14 @@
 	</div>
 	<div class="support-container text-center">
 		<h3 class="text-warning">Leave your message</h3>
-		<form>
+		<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
 			<div class="form-group mb-2">
 				<label for="name">Name</label>
 				<input type="text" class="form-control text-center" id="name" formControlName="name" />
 			</div>
 			<div class="form-group mb-2">
-				<label for="email">Contact Email</label>
-				<input type="email" class="form-control text-center" id="email" formControlName="email" />
+				<label for="contactEmail">Contact Email</label>
+				<input type="email" class="form-control text-center" id="contactEmail" formControlName="contactEmail" />
 			</div>
 			<div class="form-group mb-2">
 				<label for="phoneNumber">Phone Number</label>
@@ -63,14 +63,13 @@
 			</div>
 			<div class="form-group mb-2">
 				<label for="message">Message</label>
-				<textarea name="request" class="form-control" id="request_description" aria-required="true" aria-labelledby="request_description_label" style="height: 100px"></textarea>
+				<textarea name="request" class="form-control" id="message" formControlName="message" aria-required="true" aria-labelledby="request_description_label" style="height: 100px"></textarea>
 			</div>
 			<div class="form-group mb-2">
-				<label for="imagen">Upload an image of the error</label>
-				<input type="file" class="form-control" id="imagen" formControlName="image" />
+				<label for="image">Upload an image of the error</label>
+				<input type="file" class="form-control" id="image" (change)="onFileChange($event)" />
 			</div>
-
-			<button type="submit" value="Login Up" class="btn btn-warning btn-block mt-3">Send Message</button>
+			<button type="submit" value="Login Up" class="btn btn-warning btn-block mt-2">Send Message</button>
 		</form>
 	</div>
 	<div class="support-container-2 text-center" data-bs-theme="dark">

@@ -1,1 +1,46 @@
-<p>community works!</p>
+<div class="bg">
+	<div class="container text-white">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="mt-4 mb-3">Heaven Forum</h2>
+
+				<form (ngSubmit)="addPost()">
+					<div class="form-group text-center">
+						<label for="postContent">New Post</label>
+						<textarea [(ngModel)]="newPostContent" name="postContent" id="postContent" class="form-control" rows="3" required></textarea>
+					</div>
+					<div class="form-group">
+						<div class="row d-flex justify-content-between">
+							<div class="col-12 mt-3 text-center col-sm-3">
+								<label for="postRating">Rate Your Post</label>
+							</div>
+							<div class="col-12 col-sm-5 mt-sm-2">
+								<select [(ngModel)]="newPostRating" name="postRating" id="postRating" class="form-control text-center" required>
+									<option [ngValue]="null" disabled>Select Your Rate</option>
+									<option *ngFor="let rating of [5, 4, 3, 2, 1]" [ngValue]="rating">{{ rating }}</option>
+								</select>
+							</div>
+							<div class="col-12 d-flex justify-content-center mt-3 col-sm-3 mt-sm-1">
+								<button type="submit" class="btn btn-warning">Add Post</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				<hr />
+				<div class="mt-4">
+					<h4>Community Posts</h4>
+					<ul class="list-group">
+						<li *ngFor="let post of posts" class="list-group-item">
+							<p class="py-2">{{ post.content }}</p>
+							<hr />
+							<p class="text-center">
+								<strong>Rate {{ post.rating }} </strong>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="py-3 separator"></div>

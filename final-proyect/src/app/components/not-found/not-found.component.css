@@ -1,0 +1,10 @@
+.conta {
+	min-height: 74.5vh;
+	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
+}
+.bg {
+	min-height: 79.6vh;
+	background-size: cover;
+	background-position: center;
+	background-image: url("https://media.licdn.com/dms/image/C5112AQEw1fXuabCTyQ/article-inline_image-shrink_1500_2232/0/1581099611064?e=1724284800&v=beta&t=Cus_L1600MVB18JvghetoAJLR06EDXCAMTqtU4A-Y88");
+}

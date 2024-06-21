@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 	providedIn: "root"
 })
 export class FaviconService {
-	private favicons: string[] = ["assets/multimedia/favicon1.ico", "assets/multimedia/favicon2.ico", "assets/multimedia/favicon3.ico"];
+	private favicons: string[] = ["assets/multimedia/favicon1.ico", "assets/multimedia/favicon2.png", "assets/multimedia/favicon3.png", "assets/multimedia/favicon4.png"];
 	private currentFaviconIndex = 0;
 	private linkElement: HTMLLinkElement;
 

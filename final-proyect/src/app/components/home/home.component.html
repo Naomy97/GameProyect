@@ -3,13 +3,13 @@
 	<div class="collapse navbar-collapse text-center" id="secondaryNavbar">
 		<ul class="navbar-nav mx-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="#">Library</a>
+				<a class="nav-link" routerLink="/explore">Explore</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">New and Popular</a>
+				<a class="nav-link" routerLink="/trailers">Trailers</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Trailers</a>
+				<a class="nav-link" href="https://vandal.elespanol.com/noticias/videojuegos" target="_blank">External News</a>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Categories </a>
@@ -24,11 +24,14 @@
 					<li><a class="dropdown-item text-warning" href="#">Simulation</a></li>
 				</ul>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">News</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">News</a>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consoles and Accessories</a>
+				<ul class="dropdown-menu text-center category-navbar">
+					<li><a class="dropdown-item text-warning" href="https://www.xbox.com/es-CO/consoles" target="_blank">Xbox</a></li>
+					<li><a class="dropdown-item text-warning" href="https://www.playstation.com/es-mx/ps5/?smcid=pdc%3Aes-mx%3Aprimary%20nav%3Amsg-ps5%3Aconsola" target="_blank">PSN</a></li>
+					<li><a class="dropdown-item text-warning" href="https://www.nintendo.com/es-co/switch/" target="_blank">Nintendo</a></li>
+					<li><a class="dropdown-item text-warning" href="https://www.alkosto.com/setup-gamer/c/setup-gamer" target="_blank">PC</a></li>
+				</ul>
 			</li>
 		</ul>
 	</div>
@@ -55,29 +58,35 @@
 				<h4 class="mb-3">Home Nav</h4>
 				<ul class="nav flex-column">
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#seccion-1">Top</a>
+						<a class="nav-link text-white" href="#seccion-1">Top Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#carouselExample">Carrusel</a>
+						<a class="nav-link text-white" href="#carouselExampleAutoplaying">Carrusel</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#News">News</a>
+						<a class="nav-link text-white" href="#News">News</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#New Games">New Games</a>
+						<a class="nav-link text-white" href="#New Games">New Games</a>
 					</li>
 				</ul>
 				<hr class="my-4" />
-				<h4 class="mb-3">Categories</h4>
+				<h4 class="mb-3">External Services</h4>
 				<ul class="nav flex-column">
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#categoria-1">Category 1</a>
+						<a class="nav-link text-white" href="https://www.unrealengine.com/es-ES" target="_blank">Unreal Engine</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#categoria-2">Category 2</a>
+						<a class="nav-link text-white" href="https://www.unrealengine.com/es-ES/metahuman" target="_blank">Meta Human</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white text-decoration-underline" href="#categoria-3">Category 3</a>
+						<a class="nav-link text-white" href="https://www.twinmotion.com/en-US" target="_blank">Twin Motion</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="https://store.steampowered.com/labs/" target="_blank">Steam Labs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="https://www.kidswebservices.com/" target="_blank">Kids Web</a>
 					</li>
 				</ul>
 			</aside>
@@ -128,55 +137,57 @@
 			<div class="row text-center">
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="News 1" class="card-img-top" />
+						<img src="../../../assets/multimedia/news1.webp" alt="News 1" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">News 1</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">The most requested function of PS by its users</h5>
+							<p class="card-text">Sony has notified that the latest PlayStation Portal update will allow remote access to public networks.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="News 1" class="card-img-top" />
+						<img src="../../../assets/multimedia/news2.png" alt="News 1" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">News 1</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Elden Ring DLC ​​Patch Fixes Biggest Issue</h5>
+							<p class="card-text">The arrival of Shadow of the Erdtree, the Elden Ring DLC, is accompanied by one of the biggest updates.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="News 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/news3.png" alt="News 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">News 3</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">This is how to play Valorant on consoles</h5>
+							<p class="card-text">Since last June 14, the limited beta has been available on consoles, and those who have not yet been able to access.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="News 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/news4.png" alt="News 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">News 4</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Donkey Kong Country Returns HD, the return of a classic</h5>
+							<p class="card-text">One of the great announcements that this last Nintendo Direct has left has been the return of Donkey Kong with Donkey Kong Country Returns HD, a classic.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="News 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/news5.png" alt="News 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">News 5</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">The sequel to Lords of the Fallen is official: it will arrive in 2026</h5>
+							<p class="card-text">
+								After becoming one of the most successful soulslikes in recent years among those that do not come from From Software, CI Games has just made official the sequel.
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="News 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/news6.png" alt="News 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">News 6</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Shovel Knight announces a sequel and an improved version</h5>
+							<p class="card-text">Yacht Club Games, the video game studio that created Shovel Knight, held a presentation in which they talked about the future of the saga.</p>
 						</div>
 					</div>
 				</div>
@@ -187,55 +198,71 @@
 			<div class="row text-center">
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="New Game 1" class="card-img-top" />
+						<img src="../../../assets/multimedia/newGame1.webp" alt="New Game 1" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">New Game 1</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Black Myth: Wukong</h5>
+							<p class="card-text">
+								Black Myth: Wu Kong is an action-adventure video game with RPG elements inspired by the Soulsborne saga and the great work of Chinese literature Journey to the West.
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src=".../../../assets/multimedia/fondoLogin.png" alt="New Game 2" class="card-img-top" />
+						<img src=".../../../assets/multimedia/newGame2.webp" alt="New Game 2" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">New Game 2</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Assassin's Creed Shadows</h5>
+							<p class="card-text">
+								Assassin's Creed Shadows is an open-world action video game that takes us to explore Fuedal Japan while living the intertwined stories of Naoe, an expert Assassin shinobi from
+								the Iga province, and Yasuke
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="New Game 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/newGame3.webp" alt="New Game 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">New Game 3</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Star Wars Outlaws</h5>
+							<p class="card-text">
+								Star Wars Outlaws is an open-world action-adventure video game that challenges us to become the most wanted outlaw in the galaxy. Star Wars Outlaws invites its players to enjoy
+								the Star Wars galaxy like before.
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="New Game 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/newGame4.webp" alt="New Game 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">New Game 4</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Once Human</h5>
+							<p class="card-text">
+								Once Human is a multiplayer open-world action-survival video game set in a post-apocalyptic future. Alone or in the company of your friends, you will have to fight against
+								enemies.
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="New Game 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/newGame5.webp" alt="New Game 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">New Game 5</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Call of Duty: Black Ops 6</h5>
+							<p class="card-text">
+								The most successful multiplayer action-shooter saga on the market returns in 2024 with Call of Duty: Black Ops 6. Developed by Treyarch and Raven, this video game is presented
+								as an action and espionage.
+							</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="../../../assets/multimedia/fondoLogin.png" alt="New Game 3" class="card-img-top" />
+						<img src="../../../assets/multimedia/newGame6.webp" alt="New Game 3" class="card-img-top" />
 						<div class="card-body">
-							<h5 class="card-title">New Game 6</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+							<h5 class="card-title">Frostpunk 2</h5>
+							<p class="card-text">
+								Frostpunk 2 is an urban survival strategy video game set 30 years after an apocalyptic blizzard that devastated the Earth and turned it into a frozen wasteland. Once again you.
+							</p>
 						</div>
 					</div>
 				</div>

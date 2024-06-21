@@ -1,1 +1,37 @@
+.bg {
+	min-height: 74.2vh;
+	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
+}
+.container {
+	max-width: 800px;
+}
 
+h2,
+h4 {
+	text-align: center;
+}
+.form-control,
+.list-group-item,
+.list-option {
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
+}
+select option {
+	background: #142434;
+	color: white;
+}
+
+textarea {
+	resize: none;
+}
+.list-group-item {
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	white-space: pre-wrap;
+	display: flex;
+	flex-direction: column;
+}
+.separator {
+	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
+	background-position: 100%;
+}

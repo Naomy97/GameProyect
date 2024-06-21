@@ -1,7 +1,7 @@
 .bg {
 	margin: 0;
 	padding: 0;
-	height: 80vh;
+	height: 78.8vh;
 	width: 100%;
 	overflow: hidden;
 }
@@ -14,7 +14,7 @@
 	background-image: url("../../../assets/multimedia/fondoSingup.png");
 	background-size: cover;
 	background-position: center;
-	filter: blur(3px); /* Ajusta el valor para más o menos desenfoque */
+	filter: blur(4px); /* Ajusta el valor para más o menos desenfoque */
 	z-index: -1;
 }
 
@@ -36,8 +36,17 @@
 	background: rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (min-width: 200px) and (max-width: 800px) {
+@media only screen and (min-width: 200px) and (max-width: 500px) {
 	.bg {
 		height: 130vh;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+	.bg {
+		height: 120vh;
+	}
+	.sing-container {
+		max-width: 450px;
 	}
 }

@@ -1,5 +1,12 @@
-footer {
-	background-color: #222;
-	color: #fff;
-	padding: 10px 0;
+.ms-n1 {
+	margin-left: -20px;
+}
+
+.rate {
+	display: block;
+	width: 280px;
+	height: 40px;
+	border: 2px solid #ffc107;
+	border-radius: 20px;
+	text-align: center;
 }
