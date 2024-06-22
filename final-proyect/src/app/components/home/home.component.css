@@ -48,8 +48,8 @@
 	cursor: pointer;
 }
 .control:hover {
-	background-color: black;
+	background-color: darkblue;
 }
-.carousel {
+.carousel-item {
 	transition: transform 0.6s ease-in-out;
 }

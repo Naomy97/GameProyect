@@ -1,11 +1,13 @@
-<div class="trailer-container">
-	<div class="main-video">
-		<video width="100%" controls autoplay [src]="selectedTrailer.url">Tu navegador no soporta el elemento de video.</video>
-	</div>
-	<div class="video-list">
-		<div *ngFor="let trailer of trailers" (click)="selectTrailer(trailer)" class="video-item">
-			<video width="200px" [src]="trailer.url"></video>
-			<p>{{ trailer.title }}</p>
+<div class="bg">
+	<div class="trailer-container">
+		<div class="main-video">
+			<video width="100%" controls autoplay [src]="selectedTrailer.url"></video>
+		</div>
+		<div class="video-list">
+			<div *ngFor="let trailer of trailers" (click)="selectTrailer(trailer)" class="video-item">
+				<video width="200px" [src]="trailer.url"></video>
+				<p class="text-white">{{ trailer.title }}</p>
+			</div>
 		</div>
 	</div>
 </div>

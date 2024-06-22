@@ -20,7 +20,6 @@ export class TrailersComponent {
 		{ title: "Trailer 8", url: "assets/multimedia/trailer1.webm" },
 		{ title: "Trailer 9", url: "assets/multimedia/trailer1.webm" },
 		{ title: "Trailer 10", url: "assets/multimedia/trailer1.webm" }
-		// Añade más trailers aquí
 	];
 
 	selectedTrailer = this.trailers[0];

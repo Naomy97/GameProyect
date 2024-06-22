@@ -1,3 +1,6 @@
+.bg {
+	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
+}
 .trailer-container {
 	display: flex;
 	flex-direction: column;
@@ -7,7 +10,8 @@
 .main-video {
 	width: 100%;
 	max-width: 800px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 .video-list {
