@@ -48,7 +48,7 @@
 	</div>
 	<div class="support-container text-center">
 		<h3 class="text-warning">Leave your message</h3>
-		<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+		<form [formGroup]="myForm" (ngSubmit)="onSubmit()" #miFormulario="ngForm">
 			<div class="form-group mb-2">
 				<label for="name">Name</label>
 				<input type="text" class="form-control text-center" id="name" formControlName="name" />

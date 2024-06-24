@@ -1,0 +1,14 @@
+.bg {
+	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
+	background-size: cover;
+	background-position: center;
+}
+
+.card {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.list-group-item {
+	background: rgba(0, 0, 0, 0.3);
+	color: dimgrey;
+}

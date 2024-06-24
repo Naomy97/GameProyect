@@ -38,9 +38,8 @@ export class SupportComponent implements OnInit {
 			this.loginService.validateToken(token).subscribe((response: any) => {
 				if (response.result === "Good!") {
 					this.name = response.data.name;
-					this.toastrService.info(`Hello, Please leave your message to support you!`);
+					this.toastrService.info(`Hello ${this.name} please leave your message to support you!`);
 					this.id = response.data.id;
-					console.log(this.id);
 				} else {
 					this.loginService.logout();
 				}
@@ -68,12 +67,15 @@ export class SupportComponent implements OnInit {
 
 			this.supportService.sendRequest(formData).subscribe(
 				(response) => {
-					console.log("Datos enviados con éxito:", response);
+					this.toastrService.success("Your support request was successfully submitted");
+					this.myForm.reset();
 				},
 				(error) => {
-					console.error("Error al enviar los datos:", error);
+					this.toastrService.error("There was an error submitting your request");
 				}
 			);
+		} else {
+			this.toastrService.warning("Please fill out the form correctly.");
 		}
 	}
 }

@@ -2,12 +2,12 @@
 	<div class="container text-white">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="mt-4 mb-3">Heaven Forum</h2>
+				<h2 class="mt-4 mb-3 text-warning fs-1">Heaven Forum</h2>
 
-				<form (ngSubmit)="addPost()">
+				<form [formGroup]="postForm" (ngSubmit)="addPost()">
 					<div class="form-group text-center">
 						<label for="postContent">New Post</label>
-						<textarea [(ngModel)]="newPostContent" name="postContent" id="postContent" class="form-control" rows="3" required></textarea>
+						<textarea formControlName="content" id="postContent" class="form-control" rows="3"></textarea>
 					</div>
 					<div class="form-group">
 						<div class="row d-flex justify-content-between">
@@ -15,7 +15,7 @@
 								<label for="postRating">Rate Your Post</label>
 							</div>
 							<div class="col-12 col-sm-5 mt-sm-2">
-								<select [(ngModel)]="newPostRating" name="postRating" id="postRating" class="form-control text-center" required>
+								<select formControlName="rating" id="postRating" class="form-control text-center">
 									<option [ngValue]="null" disabled>Select Your Rate</option>
 									<option *ngFor="let rating of [5, 4, 3, 2, 1]" [ngValue]="rating">{{ rating }}</option>
 								</select>
@@ -27,17 +27,23 @@
 					</div>
 				</form>
 				<hr />
-				<div class="mt-4">
-					<h4>Community Posts</h4>
-					<ul class="list-group">
-						<li *ngFor="let post of posts" class="list-group-item">
-							<p class="py-2">{{ post.content }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mt-4">
+		<div class="row">
+			<div class="col-12">
+				<h4 class="text-warning fs-3">Community Posts</h4>
+				<div class="row">
+					<div *ngFor="let post of posts" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+						<div class="list-group-item" style="height: 22vh">
+							<p>{{ post.content }}</p>
 							<hr />
 							<p class="text-center">
 								<strong>Rate {{ post.rating }} </strong>
 							</p>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

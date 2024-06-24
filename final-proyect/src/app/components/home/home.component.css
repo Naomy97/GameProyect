@@ -40,6 +40,9 @@
 .img-caru {
 	height: 40vw;
 }
+.card {
+	height: 400px;
+}
 
 .control {
 	background-color: #000000;
@@ -52,4 +55,10 @@
 }
 .carousel-item {
 	transition: transform 0.6s ease-in-out;
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+	.card {
+		height: 450px;
+	}
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormsModule, ReactiveFormsModule, FormGroup, Validators, FormBuilder } from "@angular/forms";
+import { ToastrService } from "ngx-toastr";
+import { HttpClient } from "@angular/common/http";
 import { RegisterService } from "../../services/register.service";
 
 @Component({
@@ -12,7 +14,7 @@ import { RegisterService } from "../../services/register.service";
 export class SingUpComponent implements OnInit {
 	myForm: FormGroup;
 
-	constructor(private fb: FormBuilder, private registerService: RegisterService) {
+	constructor(private fb: FormBuilder, private http: HttpClient, private registerService: RegisterService, private toastrService: ToastrService) {
 		this.myForm = this.fb.group({
 			name: ["", Validators.required],
 			lastName: ["", Validators.required],
@@ -21,40 +23,28 @@ export class SingUpComponent implements OnInit {
 			address: ["", Validators.required],
 			phoneNumber: ["", Validators.required],
 			gender: ["", Validators.required],
-			email: ["", [Validators.required]],
+			email: ["", [Validators.required, Validators.email]],
 			password: ["", Validators.required]
 		});
 	}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.toastrService.info(`We are very grateful that you can register with us!`);
+	}
 
 	onSubmit(): void {
 		if (this.myForm.valid) {
-			const formData = new FormData();
-			/* formData.append("name", this.myForm.get("name")?.value); */
-			formData.append("name", "xxxxx");
-			formData.append("lastName", this.myForm.get("lastName")?.value);
-			formData.append("id", this.myForm.get("id")?.value);
-			formData.append("city", this.myForm.get("city")?.value);
-			formData.append("address", this.myForm.get("address")?.value);
-			formData.append("phoneNumber", this.myForm.get("phoneNumber")?.value);
-			formData.append("gender", this.myForm.get("gender")?.value);
-			formData.append("email", this.myForm.get("email")?.value);
-			formData.append("password", this.myForm.get("password")?.value);
-
-			console.log("FormData:");
-			formData.forEach((value, key) => {
-				console.log(key + ": " + value);
-			});
-
-			this.registerService.createUser(formData).subscribe(
+			this.registerService.createUser(this.myForm.value).subscribe(
 				(response) => {
-					console.log("Datos enviados con éxito:", response);
+					this.toastrService.success("Your data remains in our database, you can now log in");
+					this.myForm.reset();
 				},
 				(error) => {
-					console.error("Error al enviar los datos:", error);
+					this.toastrService.error("There was an error sending your information, please verify that everything is complete");
 				}
 			);
+		} else {
+			this.toastrService.warning("Please fill out the form correctly.");
 		}
 	}
 }

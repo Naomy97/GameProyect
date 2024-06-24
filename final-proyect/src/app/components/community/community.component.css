@@ -1,6 +1,8 @@
 .bg {
 	min-height: 74.2vh;
 	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
+	background-size: cover;
+	background-position: center;
 }
 .container {
 	max-width: 800px;
@@ -32,6 +34,5 @@ textarea {
 	flex-direction: column;
 }
 .separator {
-	background-image: url("https://shared.steamstatic.com/store_item_assets/steam/apps/1182900/page_bg_generated_v6b.jpg?t=1695817434");
-	background-position: 100%;
+	background-color: #1e2b3c;
 }

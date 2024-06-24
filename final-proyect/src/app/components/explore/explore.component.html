@@ -1,1 +1,23 @@
-<p>explore works!</p>
+<div class="bg">
+	<p class="fs-1 container-fluid text-center text-warning">Explore our Games</p>
+	<div class="row gap-4 container-fluid d-flex justify-content-center pb-5">
+		@for (game of datos; track game.id) {
+		<div class="card text-center text-white ms-4" style="width: 18rem">
+			<img src="{{ game.thumbnail }}" class="card-img-top" alt="..." />
+			<div class="card-body">
+				<h5 class="card-title">{{ game.title }}</h5>
+				<p class="card-text" style="height: 160px">{{ game.short_description }}</p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">{{ game.platform }}</li>
+				<li class="list-group-item">{{ game.genre }}</li>
+				<li class="list-group-item">{{ game.developer }}</li>
+			</ul>
+			<div class="card-body ms-3">
+				<a href="{{ game.game_url }}" class="card-link text-warning" target="_blank">Game Link</a>
+				<a href="{{ game.freetogame_profile_url }}" class="card-link text-warning" target="_blank">About Game</a>
+			</div>
+		</div>
+		}
+	</div>
+</div>

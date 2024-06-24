@@ -34,7 +34,7 @@ export class LoginService {
 	}
 
 	logout() {
-		this.toastrService.info("Bye!");
+		this.toastrService.info("Thank you for using our services, see you later.!");
 		localStorage.removeItem("token");
 		this.router.navigate(["/"]);
 	}
