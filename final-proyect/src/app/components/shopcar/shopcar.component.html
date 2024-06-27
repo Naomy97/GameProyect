@@ -1,0 +1,15 @@
+<div class="bg">
+	<div class="bg-blur"></div>
+	<div *ngIf="purchases.length > 0" class="login-container text-center">
+		<h2>Shop Cart</h2>
+		<ul class="list-inline me-2">
+			<li *ngFor="let purchase of purchases">{{ purchase.name }} - ${{ purchase.price }}</li>
+		</ul>
+		<p>Total: ${{ total }}</p>
+		<button (click)="clearPurchases()" class="btn btn-warning">Clean Game Cart</button>
+		<button class="btn btn-warning ms-2">Purchase Game</button>
+	</div>
+	<div *ngIf="purchases.length === 0" class="login-container text-center">
+		<p>No hay compras.</p>
+	</div>
+</div>

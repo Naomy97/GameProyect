@@ -8,6 +8,7 @@ import { SupportComponent } from "./components/support/support.component";
 import { CommunityComponent } from "./components/community/community.component";
 import { TrailersComponent } from "./components/trailers/trailers.component";
 import { ExploreComponent } from "./components/explore/explore.component";
+import { ShopcarComponent } from "./components/shopcar/shopcar.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { Component } from "@angular/core";
 
@@ -20,6 +21,7 @@ export const routes: Routes = [
 	{ path: "community", component: CommunityComponent, title: "Community", canActivate: [activateGuard] },
 	{ path: "trailers", component: TrailersComponent, title: "Trailers" },
 	{ path: "explore", component: ExploreComponent, title: "Explore Games" },
+	{ path: "shopcart", component: ShopcarComponent, title: "Shop Cart" },
 	{ path: "", redirectTo: "home", pathMatch: "full" },
 	{ path: "**", component: NotFoundComponent, title: "Error 404" }
 ];
