@@ -11,7 +11,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url("../../../assets/multimedia/fondoSingup.png");
+	background-image: url("../../../assets/multimedia/fondoSingUp.png");
 	background-size: cover;
 	background-position: center;
 	filter: blur(4px); /* Ajusta el valor para más o menos desenfoque */
