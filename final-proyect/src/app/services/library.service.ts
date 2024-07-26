@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class LibraryService {
 	constructor(private httpClient: HttpClient) {}
 
-	API_URL = "http://localhost:3000/library";
+	API_URL = "http://3.16.25.44:3000/library";
 
 	readAllGames() {
 		return this.httpClient.get(this.API_URL);

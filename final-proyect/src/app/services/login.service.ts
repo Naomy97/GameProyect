@@ -13,7 +13,7 @@ export class LoginService {
 	toastrService = inject(ToastrService);
 	router = inject(Router);
 
-	API_URL = "http://localhost:3000/login";
+	API_URL = "http://3.16.25.44:3000/login";
 	redirectUrl: string | null = null;
 
 	login(credential: Credential) {
