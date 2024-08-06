@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 export class StoreService {
 	constructor(private httpClient: HttpClient) {}
 
-	API_URL = "http://3.16.25.44:3000/games";
+	API_URL = "http://18.118.104.75:3000/games";
 
 	readGames() {
 		return this.httpClient.get(this.API_URL);

@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class PostService {
 	constructor(private httpClient: HttpClient) {}
 
-	API_URL = "http://3.16.25.44:3000/post";
+	API_URL = "http://18.118.104.75:3000/post";
 
 	createPost(post: any) {
 		return this.httpClient.post(this.API_URL, post);
