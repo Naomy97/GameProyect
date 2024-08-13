@@ -8,7 +8,7 @@ import { ToastrService } from "ngx-toastr";
 export class RegisterService {
 	constructor(private httpClient: HttpClient, private toastrService: ToastrService) {}
 
-	API_URL = "http://18.118.104.75:3000/users";
+	API_URL = "http://3.15.166.13:3000/users";
 
 	createUser(formData: FormData) {
 		return this.httpClient.post(this.API_URL, formData);

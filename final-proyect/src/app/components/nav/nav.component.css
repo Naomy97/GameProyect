@@ -4,3 +4,24 @@ header {
 .img-nav {
 	height: 50px;
 }
+
+/* .cart-icon {
+	position: relative;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.cart-icon i {
+	font-size: 1.5rem;
+}
+
+.cart-icon .badge {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	padding: 5px 10px;
+	border-radius: 50%;
+	background-color: red;
+	color: white;
+}
+ */

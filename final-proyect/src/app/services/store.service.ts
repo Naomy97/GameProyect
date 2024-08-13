@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { Game } from "../interfaces/storeModel";
 
 @Injectable({
 	providedIn: "root"
@@ -8,10 +9,10 @@ import { Observable } from "rxjs";
 export class StoreService {
 	constructor(private httpClient: HttpClient) {}
 
-	API_URL = "http://18.118.104.75:3000/games";
+	API_URL = "http://3.15.166.13:3000/games";
 
-	readGames() {
-		return this.httpClient.get(this.API_URL);
+	readGames(): Observable<Game[]> {
+		return this.httpClient.get<Game[]>(this.API_URL);
 	}
 
 	buyGame(gameId: string): Observable<any> {

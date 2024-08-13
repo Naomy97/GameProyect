@@ -31,9 +31,16 @@
 			<div class="d-flex justify-content-center p-2">
 				@if(loginService.isLogin()) {
 				<button class="btn btn-outline-light me-2" (click)="loginService.logout()">Log Out</button>
+				<div class="cart-icon">
+					<i class="fas fa-shopping-cart"></i>
+					<a routerLink="shopcart" class="nav-link">
+						<span class="badge bg-danger">{{ cartCount$ | async }}</span>
+					</a>
+				</div>
 				} @else {
-				<button class="btn btn-outline-light me-2" routerLink="login">Login Up</button>
-				<button class="btn btn-outline-light me-2" routerLink="singup">Sing Up</button>
+
+				<button class="btn btn-outline-light me-2" routerLink="login">Login</button>
+				<button class="btn btn-outline-light me-2" routerLink="signup">Sign Up</button>
 				}
 			</div>
 		</div>

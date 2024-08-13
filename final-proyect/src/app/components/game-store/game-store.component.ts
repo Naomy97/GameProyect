@@ -50,7 +50,7 @@ export class GameStoreComponent implements OnInit {
 		this.storeService.buyGame(gameId).subscribe(
 			(response) => {
 				this.shopcarService.addPurchase({ name: gameId.name, price: gameId.price.pc });
-				this.router.navigate(["/shopcart"]);
+				/* this.router.navigate(["/shopcart"]); */
 				this.toastrService.success(`Successfully purchased game`);
 			},
 			(error) => {

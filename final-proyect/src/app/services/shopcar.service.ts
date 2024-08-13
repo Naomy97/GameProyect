@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
+import { map } from "rxjs/operators";
 
 @Injectable({
 	providedIn: "root"
@@ -15,5 +16,9 @@ export class ShopcarService {
 
 	clearPurchases() {
 		this.purchasesSubject.next([]);
+	}
+
+	getPurchaseCount(): Observable<number> {
+		return this.purchases$.pipe(map((purchases) => purchases.length));
 	}
 }
