@@ -16,7 +16,7 @@ export const routes: Routes = [
 	{ path: "home", component: HomeComponent, title: "Home" },
 	{ path: "login", component: LoginComponent, title: "Login" },
 	{ path: "gamestore", component: GameStoreComponent, title: "Game Store", canActivate: [activateGuard] },
-	{ path: "singup", component: SingUpComponent, title: "Sing Up" },
+	{ path: "register", component: SingUpComponent, title: "Sing Up" },
 	{ path: "support", component: SupportComponent, title: "Support", canActivate: [activateGuard] },
 	{ path: "community", component: CommunityComponent, title: "Community", canActivate: [activateGuard] },
 	{ path: "trailers", component: TrailersComponent, title: "Trailers" },

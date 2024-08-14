@@ -6,18 +6,18 @@ import { LibraryService } from "../../services/library.service";
 	standalone: true,
 	imports: [],
 	templateUrl: "./explore.component.html",
-	styleUrl: "./explore.component.css"
+	styleUrls: ["./explore.component.css"]
 })
 export class ExploreComponent implements OnInit {
-	public datos: any;
+	public games: any; // Cambiado de 'datos' a 'games'
 
 	constructor(private libraryService: LibraryService) {}
 
 	ngOnInit(): void {
 		this.libraryService.readAllGames().subscribe(
 			(response) => {
-				this.datos = response;
-				console.log(this.datos);
+				this.games = response; // Cambiado de 'datos' a 'games'
+				console.log(this.games);
 			},
 			(error) => {
 				console.error("Error al obtener los datos:", error);

@@ -1,7 +1,7 @@
 <div class="bg">
 	<p class="fs-1 container-fluid text-center text-warning">Explore our Games</p>
 	<div class="row gap-4 container-fluid d-flex justify-content-center pb-5">
-		@for (game of datos; track game.id) {
+		@for (game of games; track game.id) {
 		<div class="card text-center text-white ms-4" style="width: 18rem">
 			<img src="{{ game.thumbnail }}" class="card-img-top" alt="..." />
 			<div class="card-body">
